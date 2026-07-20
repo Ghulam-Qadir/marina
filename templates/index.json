@@ -178,6 +178,19 @@
         "heading": "IMPROVE YOUR SLEEP",
         "description": "Discover our curated selection of sleep essentials designed to give you the rest you deserve."
       }
+    },
+    "cm_blog_posts_iGFmxg": {
+      "type": "cm-blog-posts",
+      "name": "CM Blog Posts",
+      "settings": {
+        "eyebrow": "WANT TO KNOW MORE",
+        "heading": "READ THE CLOUDY'S DIGEST",
+        "description": "",
+        "blog": "news",
+        "posts_count": 3,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
@@ -185,6 +198,7 @@
     "brand_section_ppMbc4",
     "cm_best_sellers_zKJjrC",
     "cm_sleep_cta_gNWtdx",
-    "cm_product_tabs_rUzKzY"
+    "cm_product_tabs_rUzKzY",
+    "cm_blog_posts_iGFmxg"
   ]
 }
