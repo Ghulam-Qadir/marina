@@ -1,0 +1,286 @@
+{{ 'brand-section.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="brand-section section-{{ section.id }}-padding">
+  <div class="brand-wrap">
+    {%- comment -%} HEADER {%- endcomment -%}
+    {%- if section.settings.eyebrow != blank or section.settings.heading != blank or section.settings.description != blank -%}
+      <div class="brand-header">
+        {%- if section.settings.badge_image != blank -%}
+          <div class="brand-badges">
+            <img src="{{ section.settings.badge_image | image_url: width: 140 }}" alt="{{ section.settings.badge_image.alt | escape }}" width="70" height="{{ 70 | divided_by: section.settings.badge_image.aspect_ratio | round }}" loading="lazy">
+          </div>
+        {%- endif -%}
+        <div>
+          {%- if section.settings.eyebrow != blank -%}
+            <div class="brand-eyebrow">{{ section.settings.eyebrow }}</div>
+          {%- endif -%}
+          {%- if section.settings.heading != blank -%}
+            <h2 class="brand-title">{{ section.settings.heading }}</h2>
+          {%- endif -%}
+          {%- if section.settings.description != blank -%}
+            <p class="brand-sub">{{ section.settings.description }}</p>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} LOGO SLIDER {%- endcomment -%}
+    {%- assign logo_blocks = section.blocks | where: "type", "logo" -%}
+    {%- if logo_blocks.size > 0 -%}
+      <div class="brand-slider">
+        <div class="brand-track">
+          {%- for block in logo_blocks -%}
+            {%- if block.settings.logo != blank -%}
+              <div class="brand-item" {{ block.shopify_attributes }}>
+                <img src="{{ block.settings.logo | image_url: width: 300 }}" alt="{{ block.settings.logo.alt | escape }}" width="154" height="{{ 154 | divided_by: block.settings.logo.aspect_ratio | round }}" loading="lazy">
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+          {%- comment -%} Clone for seamless infinite loop {%- endcomment -%}
+          {%- for block in logo_blocks -%}
+            {%- if block.settings.logo != blank -%}
+              <div class="brand-item" aria-hidden="true">
+                <img src="{{ block.settings.logo | image_url: width: 300 }}" alt="" width="154" height="{{ 154 | divided_by: block.settings.logo.aspect_ratio | round }}" loading="lazy">
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} HERO BANNER {%- endcomment -%}
+    {%- if section.settings.banner_image != blank -%}
+      <div class="brand-hero-banner">
+        {%- liquid
+          assign banner_height = section.settings.banner_image.width | divided_by: section.settings.banner_image.aspect_ratio
+        -%}
+        {{ section.settings.banner_image | image_url: width: 3840 | image_tag: width: section.settings.banner_image.width, height: banner_height, sizes: "100vw", widths: "375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840", loading: "lazy" }}
+        <div class="brand-hero-overlay">
+          {%- comment -%} DISCOUNT TEXT {%- endcomment -%}
+          {%- if section.settings.discount_get != blank or section.settings.discount_percent != blank -%}
+            <div class="brand-discount-text">
+              {%- if section.settings.discount_get != blank -%}
+                <span class="get">{{ section.settings.discount_get }}</span>
+              {%- endif -%}
+              {%- if section.settings.discount_percent != blank -%}
+                <span class="percent">{{ section.settings.discount_percent }}</span>
+              {%- endif -%}
+              {%- if section.settings.discount_off != blank -%}
+                <span class="off">{{ section.settings.discount_off }}</span>
+              {%- endif -%}
+              {%- if section.settings.discount_sub != blank -%}
+                <span class="sub">{{ section.settings.discount_sub }}</span>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+
+          {%- comment -%} FINANCING TEXT {%- endcomment -%}
+          {%- if section.settings.financing_desc != blank or section.settings.financing_percent != blank -%}
+            <div class="brand-financing-text">
+              {%- if section.settings.financing_desc != blank -%}
+                <span class="desc">{{ section.settings.financing_desc }}</span>
+              {%- endif -%}
+              {%- if section.settings.financing_get != blank -%}
+                <span class="get">{{ section.settings.financing_get }}</span>
+              {%- endif -%}
+              {%- if section.settings.financing_percent != blank -%}
+                <span class="percent">{{ section.settings.financing_percent }}</span>
+              {%- endif -%}
+              {%- if section.settings.financing_off != blank -%}
+                <span class="off">{{ section.settings.financing_off }}</span>
+              {%- endif -%}
+              {%- if section.settings.financing_sub != blank -%}
+                <span class="sub">{{ section.settings.financing_sub }}</span>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+
+          {%- comment -%} BRAND LOGO {%- endcomment -%}
+          {%- if section.settings.brand_logo != blank -%}
+            <div class="brand-logo">
+              <img src="{{ section.settings.brand_logo | image_url: width: 440 }}" alt="{{ section.settings.brand_logo.alt | escape }}" width="220" height="{{ 220 | divided_by: section.settings.brand_logo.aspect_ratio | round }}" loading="lazy">
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Brand Section",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header"
+    },
+    {
+      "type": "image_picker",
+      "id": "badge_image",
+      "label": "Badge image"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "default": "SHOP BY BRAND",
+      "label": "Eyebrow text"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "DISCOVER TOP NAMES YOU TRUST",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "default": "Designed to bring you quality, comfort, and lasting value, choose from the best in the business.",
+      "label": "Description"
+    },
+    {
+      "type": "header",
+      "content": "Hero banner"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Banner image"
+    },
+    {
+      "type": "header",
+      "content": "Discount text"
+    },
+    {
+      "type": "text",
+      "id": "discount_get",
+      "default": "GET",
+      "label": "Get text"
+    },
+    {
+      "type": "text",
+      "id": "discount_percent",
+      "default": "25%",
+      "label": "Percent text"
+    },
+    {
+      "type": "text",
+      "id": "discount_off",
+      "default": "Off",
+      "label": "Off text"
+    },
+    {
+      "type": "text",
+      "id": "discount_sub",
+      "default": "On All Mattresses",
+      "label": "Sub text"
+    },
+    {
+      "type": "header",
+      "content": "Financing text"
+    },
+    {
+      "type": "text",
+      "id": "financing_desc",
+      "default": "Make your dream mattress a reality with our flexible financing options.",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "financing_get",
+      "label": "Get text"
+    },
+    {
+      "type": "text",
+      "id": "financing_percent",
+      "default": "0%",
+      "label": "Percent text"
+    },
+    {
+      "type": "text",
+      "id": "financing_off",
+      "default": "Interest",
+      "label": "Off text"
+    },
+    {
+      "type": "text",
+      "id": "financing_sub",
+      "default": "FINANCING AVAILABLE",
+      "label": "Sub text"
+    },
+    {
+      "type": "image_picker",
+      "id": "brand_logo",
+      "label": "Brand logo (right side)"
+    },
+    {
+      "type": "header",
+      "content": "Padding"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding top",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding bottom",
+      "default": 52
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Brand logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Brand Section",
+      "blocks": [
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" }
+      ]
+    }
+  ]
+}
+{% endschema %}
