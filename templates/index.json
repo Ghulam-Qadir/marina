@@ -102,10 +102,63 @@
         "heading": "BEST SELLERS",
         "description": "",
         "promo_small": "Shop Our Best Sellers",
-        "promo_large": "Best\nDiscounts",
+        "promo_large": "BestDiscounts",
         "collection": "",
         "padding_top": 40,
         "padding_bottom": 40
+      }
+    },
+    "cm_product_tabs_rUzKzY": {
+      "type": "cm-product-tabs",
+      "blocks": {
+        "tab_qyQUfg": {
+          "type": "tab",
+          "settings": {
+            "tab_name": "Mattress",
+            "collection": "",
+            "view_all_link": "",
+            "view_all_text": "View All"
+          }
+        },
+        "tab_FneePH": {
+          "type": "tab",
+          "settings": {
+            "tab_name": "Adjustable Bases",
+            "collection": "",
+            "view_all_link": "",
+            "view_all_text": "View All"
+          }
+        },
+        "tab_RqbkTM": {
+          "type": "tab",
+          "settings": {
+            "tab_name": "Soft Pillows",
+            "collection": "",
+            "view_all_link": "",
+            "view_all_text": "View All"
+          }
+        },
+        "tab_LtnHfn": {
+          "type": "tab",
+          "settings": {
+            "tab_name": "Bedding",
+            "collection": "",
+            "view_all_link": "",
+            "view_all_text": "View All"
+          }
+        }
+      },
+      "block_order": [
+        "tab_qyQUfg",
+        "tab_FneePH",
+        "tab_RqbkTM",
+        "tab_LtnHfn"
+      ],
+      "name": "CM Product Tabs",
+      "settings": {
+        "eyebrow": "PRODUCTS TO",
+        "heading": "IMPROVE YOUR SLEEP",
+        "description": "Discover our curated selection of sleep essentials designed to give you the rest you deserve."
       }
     },
     "featured_collection": {
@@ -188,6 +241,7 @@
     "cm_hero_JJ3Qet",
     "brand_section_ppMbc4",
     "cm_best_sellers_zKJjrC",
+    "cm_product_tabs_rUzKzY",
     "featured_collection",
     "cta_banner_RM36LL"
   ]
