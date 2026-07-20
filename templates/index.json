@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "cm_hero_JJ3Qet": {
@@ -34,9 +43,98 @@
         "feature_big_4": "CHECKOUT"
       }
     },
+    "brand_section_ppMbc4": {
+      "type": "brand-section",
+      "blocks": {
+        "logo_XkyHVz": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Main_b13ad453-477c-4ed1-9b43-81f3345adfd6.jpg"
+          }
+        },
+        "logo_C3E6VY": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Main_b9e0da7f-db89-4d41-83f0-7f417b02831d.jpg"
+          }
+        },
+        "logo_rH6w6t": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Main_589fc064-24a2-4236-9eaf-13b2bd35d21d.jpg"
+          }
+        },
+        "logo_4weDnR": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Main_f44a9605-cd62-464d-b095-d45cdaa0d0d7.jpg"
+          }
+        },
+        "logo_mw4QqQ": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Main_0a40b01b-5021-48c1-80d1-aa8ab4876d3d.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "logo_XkyHVz",
+        "logo_C3E6VY",
+        "logo_rH6w6t",
+        "logo_4weDnR",
+        "logo_mw4QqQ"
+      ],
+      "name": "Brand Section",
+      "settings": {
+        "eyebrow": "SHOP BY BRAND",
+        "heading": "DISCOVER TOP NAMES YOU TRUST",
+        "description": "Designed to bring you quality, comfort, and lasting value, choose from the best in the business.",
+        "discount_get": "GET",
+        "discount_percent": "25%",
+        "discount_off": "Off",
+        "discount_sub": "On All Mattresses",
+        "financing_desc": "Make your dream mattress a reality with our flexible financing options.",
+        "financing_get": "",
+        "financing_percent": "0%",
+        "financing_off": "Interest",
+        "financing_sub": "FINANCING AVAILABLE",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "cm_best_sellers_zKJjrC": {
+      "type": "cm-best-sellers",
+      "name": "CM Best Sellers",
+      "settings": {
+        "eyebrow": "OUR BEST",
+        "heading": "BEST SELLERS",
+        "description": "",
+        "promo_image": "shopify://shop_images/saller-half-bg.png",
+        "promo_small": "Shop Our Best Sellers",
+        "promo_large": "BestDiscounts",
+        "collection": "hydrogen",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "cm_sleep_cta_gNWtdx": {
+      "type": "cm-sleep-cta",
+      "name": "CM Sleep CTA",
+      "settings": {
+        "eyebrow": "",
+        "heading_top": "",
+        "heading_bottom": "",
+        "description": "<p>Finding the perfect mattress is the key to waking up pain-free and fully rested. Whether you struggle with back pain, joint discomfort, or just can’t find the right balance between support and comfort, we’ve got you covered!</p>",
+        "btn_label": "Shop Now",
+        "btn_link": "shopify://collections/hydrogen",
+        "bg_color": "#f7e5c8",
+        "image": "shopify://shop_images/sleeping-girl.png",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "cm_product_tabs_rUzKzY": {
       "type": "cm-product-tabs",
-      "name": "CM Product Tabs",
       "blocks": {
         "tab_qyQUfg": {
           "type": "tab",
@@ -81,212 +179,12 @@
         "tab_RqbkTM",
         "tab_LtnHfn"
       ],
+      "name": "CM Product Tabs",
       "settings": {
         "eyebrow": "PRODUCTS TO",
         "heading": "IMPROVE YOUR SLEEP",
         "description": "Discover our curated selection of sleep essentials designed to give you the rest you deserve."
       }
-    },
-    "cm_sleep_cta_gNWtdx": {
-      "type": "cm-sleep-cta",
-      "name": "CM Sleep CTA",
-      "settings": {
-        "eyebrow": "PERFECT SLEEP",
-        "heading_top": "Let's Find The",
-        "main_title": "Perfect Sleep",
-        "heading_bottom": "Solution for you",
-        "description": "<p>Finding the perfect mattress is the key to waking up pain-free and fully rested. Whether you struggle with back pain, joint discomfort, or just can't find the right balance between support and comfort, we've got you covered!</p>",
-        "btn_label": "Take the Mattress Quiz",
-        "btn_link": "",
-        "subtext": "Take our quick 2-minute quiz to discover the mattress that's designed for your unique sleep needs.",
-        "bg_color": "#f7e5c8",
-        "image": "shopify://shop_images/sleeping-girl.png",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
-    "cm_best_sellers_zKJjrC": {
-      "type": "cm-best-sellers",
-      "name": "CM Best Sellers",
-      "settings": {
-        "eyebrow": "OUR BEST",
-        "heading": "BEST SELLERS",
-        "description": "",
-        "promo_image": "shopify://shop_images/saller-half-bg.png",
-        "promo_small": "Shop Our Best Sellers",
-        "promo_large": "BestDiscounts",
-        "collection": "hydrogen",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "brand_section_ppMbc4": {
-      "type": "brand-section",
-      "name": "Brand Section",
-      "blocks": {
-        "logo_XkyHVz": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Main_b13ad453-477c-4ed1-9b43-81f3345adfd6.jpg"
-          }
-        },
-        "logo_C3E6VY": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Main_b9e0da7f-db89-4d41-83f0-7f417b02831d.jpg"
-          }
-        },
-        "logo_rH6w6t": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Main_589fc064-24a2-4236-9eaf-13b2bd35d21d.jpg"
-          }
-        },
-        "logo_4weDnR": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Main_f44a9605-cd62-464d-b095-d45cdaa0d0d7.jpg"
-          }
-        },
-        "logo_mw4QqQ": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Main_0a40b01b-5021-48c1-80d1-aa8ab4876d3d.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "logo_XkyHVz",
-        "logo_C3E6VY",
-        "logo_rH6w6t",
-        "logo_4weDnR",
-        "logo_mw4QqQ"
-      ],
-      "settings": {
-        "eyebrow": "SHOP BY BRAND",
-        "heading": "DISCOVER TOP NAMES YOU TRUST",
-        "description": "Designed to bring you quality, comfort, and lasting value, choose from the best in the business.",
-        "discount_get": "GET",
-        "discount_percent": "25%",
-        "discount_off": "Off",
-        "discount_sub": "On All Mattresses",
-        "financing_desc": "Make your dream mattress a reality with our flexible financing options.",
-        "financing_get": "",
-        "financing_percent": "0%",
-        "financing_off": "Interest",
-        "financing_sub": "FINANCING AVAILABLE",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
-    },
-    "cm-fit-space": {
-      "type": "cm-fit-space",
-      "settings": {
-        "eyebrow": "FIND YOUR PERFECT FIT",
-        "heading": "FIT YOUR SPACE",
-        "description": "Find the right size mattress for your bedroom"
-      },
-      "blocks": {
-        "twin-xl": {
-          "type": "size_tab",
-          "settings": { "size_name": "Twin XL" }
-        },
-        "full": {
-          "type": "size_tab",
-          "settings": { "size_name": "Full" }
-        },
-        "queen": {
-          "type": "size_tab",
-          "settings": { "size_name": "Queen" }
-        },
-        "king": {
-          "type": "size_tab",
-          "settings": { "size_name": "King" }
-        },
-        "split-queen": {
-          "type": "size_tab",
-          "settings": { "size_name": "Split Queen" }
-        }
-      },
-      "block_order": ["twin-xl", "full", "queen", "king", "split-queen"]
-    },
-    "cm-bundle": {
-      "type": "cm-bundle",
-      "settings": {
-        "heading": "Buy More Save More"
-      }
-    },
-    "cm-faq": {
-      "type": "cm-faq",
-      "settings": {
-        "eyebrow": "FREQUENTLY ASKED",
-        "heading": "QUESTIONS",
-        "banner_small": "Still",
-        "banner_title": "Have Questions?",
-        "banner_text": "Our sleep experts are here to help you find the perfect mattress."
-      },
-      "blocks": {
-        "faq-1": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How long does shipping take?",
-            "answer": "<p>We offer free shipping on all orders. Most mattresses ship within 3-5 business days and arrive within 7-10 business days.</p>"
-          }
-        },
-        "faq-2": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What is your return policy?",
-            "answer": "<p>We offer a 120-day sleep trial. If you're not satisfied with your mattress, you can return it for a full refund.</p>"
-          }
-        },
-        "faq-3": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Do you offer financing?",
-            "answer": "<p>Yes! We offer 0% interest financing on qualifying purchases. Apply at checkout to see if you qualify.</p>"
-          }
-        },
-        "faq-4": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What warranty do you offer?",
-            "answer": "<p>All our mattresses come with a 10-year limited warranty covering manufacturing defects and body impressions.</p>"
-          }
-        },
-        "faq-5": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Can I try the mattress before buying?",
-            "answer": "<p>While we don't have physical showrooms, our 120-day sleep trial lets you try the mattress in the comfort of your own home.</p>"
-          }
-        },
-        "contact-1": {
-          "type": "contact_card",
-          "settings": {
-            "title": "Call Us",
-            "description": "Speak with a sleep expert",
-            "phone": "800-540-9851"
-          }
-        },
-        "contact-2": {
-          "type": "contact_card",
-          "settings": {
-            "title": "Live Chat",
-            "description": "Chat with our team online",
-            "phone": ""
-          }
-        },
-        "contact-3": {
-          "type": "contact_card",
-          "settings": {
-            "title": "Email Us",
-            "description": "Send us a message anytime",
-            "phone": "support@cloudymattress.com"
-          }
-        }
-      },
-      "block_order": ["faq-1", "faq-2", "faq-3", "faq-4", "faq-5", "contact-1", "contact-2", "contact-3"]
     },
     "cm_blog_posts_iGFmxg": {
       "type": "cm-blog-posts",
@@ -300,26 +198,14 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
-    },
-    "cm-newsletter": {
-      "type": "cm-newsletter",
-      "settings": {
-        "eyebrow": "SIGN-UP TO OUR",
-        "title": "<strong>NEWSLETTER</strong><br><strong>AND SAVE 10% ON</strong>",
-        "subtext": "Your first purchase"
-      }
     }
   },
   "order": [
     "cm_hero_JJ3Qet",
-    "cm_product_tabs_rUzKzY",
-    "cm_sleep_cta_gNWtdx",
-    "cm_best_sellers_zKJjrC",
     "brand_section_ppMbc4",
-    "cm-fit-space",
-    "cm-bundle",
-    "cm-faq",
-    "cm_blog_posts_iGFmxg",
-    "cm-newsletter"
+    "cm_best_sellers_zKJjrC",
+    "cm_sleep_cta_gNWtdx",
+    "cm_product_tabs_rUzKzY",
+    "cm_blog_posts_iGFmxg"
   ]
 }
