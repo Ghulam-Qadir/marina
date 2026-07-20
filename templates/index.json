@@ -29,12 +29,16 @@
         "badge_icon_3": "shopify://shop_images/guidance-icon.svg",
         "badge_label_3_top": "EXPERT",
         "badge_label_3_bottom": "GUIDANCE",
+        "feature_icon_1": "shopify://shop_images/shiping-free-car.png",
         "feature_small_1": "FREE",
         "feature_big_1": "SHIPPING",
+        "feature_icon_2": "shopify://shop_images/return.svg",
         "feature_small_2": "EASY",
         "feature_big_2": "RETURN",
+        "feature_icon_3": "shopify://shop_images/financing.svg",
         "feature_small_3": "QUICK",
         "feature_big_3": "FINANCING",
+        "feature_icon_4": "shopify://shop_images/secure-checkout.svg",
         "feature_small_4": "SECURE",
         "feature_big_4": "CHECKOUT"
       }
