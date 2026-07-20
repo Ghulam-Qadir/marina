@@ -17,181 +17,204 @@
         "brand-ashley": {
           "type": "brand_link",
           "settings": {
-            "label": "Ashley"
+            "label": "Ashley",
+            "url": ""
           }
         },
         "brand-dreamcloud": {
           "type": "brand_link",
           "settings": {
-            "label": "Dream Cloud"
+            "label": "Dream Cloud",
+            "url": ""
           }
         },
         "brand-ghostbed": {
           "type": "brand_link",
           "settings": {
-            "label": "Ghostbed"
+            "label": "Ghostbed",
+            "url": ""
           }
         },
         "brand-diamond": {
           "type": "brand_link",
           "settings": {
-            "label": "Diamond"
+            "label": "Diamond",
+            "url": ""
           }
         },
         "brand-corsicana": {
           "type": "brand_link",
           "settings": {
-            "label": "Corsicana"
+            "label": "Corsicana",
+            "url": ""
           }
         },
         "brand-sleeptone": {
           "type": "brand_link",
           "settings": {
-            "label": "Sleeptone"
+            "label": "Sleeptone",
+            "url": ""
           }
         },
         "brand-american-star": {
           "type": "brand_link",
           "settings": {
-            "label": "American Star"
+            "label": "American Star",
+            "url": ""
           }
         },
         "brand-malouf": {
           "type": "brand_link",
           "settings": {
-            "label": "Malouf"
+            "label": "Malouf",
+            "url": ""
           }
         },
         "brand-bedgear": {
           "type": "brand_link",
           "settings": {
-            "label": "Bedgear"
+            "label": "Bedgear",
+            "url": ""
           }
         },
         "brand-blusleep": {
           "type": "brand_link",
           "settings": {
-            "label": "Blu Sleep"
+            "label": "Blu Sleep",
+            "url": ""
           }
         },
         "brand-hiend": {
           "type": "brand_link",
           "settings": {
-            "label": "Hiend"
+            "label": "Hiend",
+            "url": ""
           }
         },
         "brand-bundle": {
           "type": "brand_link",
           "settings": {
-            "label": "Bundle Of Dream"
+            "label": "Bundle Of Dream",
+            "url": ""
           }
         },
         "brand-72hours": {
           "type": "brand_link",
           "settings": {
-            "label": "72 Hours Sale"
+            "label": "72 Hours Sale",
+            "url": ""
           }
         },
         "brand-closeout": {
           "type": "brand_link",
           "settings": {
-            "label": "Closeout"
+            "label": "Closeout",
+            "url": ""
           }
         },
         "info-search": {
           "type": "info_link",
           "settings": {
-            "label": "Search"
+            "label": "Search",
+            "url": ""
           }
         },
         "info-contact": {
           "type": "info_link",
           "settings": {
-            "label": "Contact Us"
+            "label": "Contact Us",
+            "url": ""
           }
         },
         "info-blogs": {
           "type": "info_link",
           "settings": {
-            "label": "Blogs"
+            "label": "Blogs",
+            "url": ""
           }
         },
         "info-faq": {
           "type": "info_link",
           "settings": {
-            "label": "FAQ's"
+            "label": "FAQ's",
+            "url": ""
           }
         },
         "info-shipping": {
           "type": "info_link",
           "settings": {
-            "label": "Shipping and Delivery"
+            "label": "Shipping and Delivery",
+            "url": ""
           }
         },
         "info-returns": {
           "type": "info_link",
           "settings": {
-            "label": "Return Policy"
+            "label": "Return Policy",
+            "url": ""
           }
         },
         "info-trial": {
           "type": "info_link",
           "settings": {
-            "label": "120 Days Sleep Trial"
+            "label": "120 Days Sleep Trial",
+            "url": ""
           }
         },
         "company-about": {
           "type": "company_link",
           "settings": {
-            "label": "About us"
+            "label": "About us",
+            "url": ""
           }
         },
         "company-financing": {
           "type": "company_link",
           "settings": {
-            "label": "Financing"
+            "label": "Financing",
+            "url": ""
           }
         },
         "company-privacy": {
           "type": "company_link",
           "settings": {
-            "label": "Privacy Policy"
+            "label": "Privacy Policy",
+            "url": ""
           }
         },
         "company-terms": {
           "type": "company_link",
           "settings": {
-            "label": "Terms of service"
+            "label": "Terms of service",
+            "url": ""
           }
         },
         "company-warranty": {
           "type": "company_link",
           "settings": {
-            "label": "Warranty"
+            "label": "Warranty",
+            "url": ""
           }
         },
         "social-facebook": {
           "type": "social_link",
           "settings": {
-            "url": "#"
+            "url": "#",
+            "icon": "youtube"
           }
         },
         "social-youtube": {
           "type": "social_link",
           "settings": {
-            "url": "#"
+            "url": "#",
+            "icon": "instagram"
           }
         },
         "social-instagram": {
           "type": "social_link",
           "settings": {
-            "url": "#"
-          }
-        },
-        "social-twitter": {
-          "type": "social_link",
-          "settings": {
-            "url": "#"
+            "url": "#",
+            "icon": "x"
           }
         }
       },
@@ -224,8 +247,7 @@
         "company-warranty",
         "social-facebook",
         "social-youtube",
-        "social-instagram",
-        "social-twitter"
+        "social-instagram"
       ],
       "settings": {
         "heading": "We Continue to Set the Standard for Restful Nights.",
@@ -234,7 +256,8 @@
         "phone_hours": "Mon–Fri 10am – 5pm CT",
         "address": "Address – 6075 Old Canton Rd, Jackson MS 39211\nPhone Number – 800-540-9851",
         "newsletter_eyebrow": "SIGN-UP TO OUR",
-        "newsletter_title": "NEWSLETTER AND SAVE 10% ON"
+        "newsletter_title": "NEWSLETTER AND SAVE 10% ON",
+        "newsletter_heading": ""
       }
     }
   },
