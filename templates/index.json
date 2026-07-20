@@ -31,7 +31,6 @@
         "badge_label_3_bottom": "GUIDANCE",
         "feature_small_1": "FREE",
         "feature_big_1": "SHIPPING",
-        "feature_icon_2": "shopify://shop_images/guidance-icon.svg",
         "feature_small_2": "EASY",
         "feature_big_2": "RETURN",
         "feature_small_3": "QUICK",
@@ -95,6 +94,7 @@
         "financing_percent": "0%",
         "financing_off": "Interest",
         "financing_sub": "FINANCING AVAILABLE",
+        "brand_logo": "shopify://shop_images/improve-sleep_1.png",
         "padding_top": 40,
         "padding_bottom": 52
       }
