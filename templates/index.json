@@ -75,10 +75,58 @@
         "padding_top": 44,
         "padding_bottom": 36
       }
+    },
+    "cta_banner_RM36LL": {
+      "type": "cta-banner",
+      "blocks": {
+        "heading_PLApRe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_D7wCEA": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "button_LG3NkP": {
+          "type": "button",
+          "settings": {
+            "button_label": "Contact us",
+            "button_link": "",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_PLApRe",
+        "text_D7wCEA",
+        "button_LG3NkP"
+      ],
+      "name": "CTA Banner",
+      "settings": {
+        "show_background_image": true,
+        "image": "shopify://shop_images/theme_cover_image.jpg",
+        "image_overlay_opacity": 70,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-4",
+        "mobile_content_alignment": "center",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "image_banner",
-    "featured_collection"
+    "featured_collection",
+    "cta_banner_RM36LL"
   ]
 }
