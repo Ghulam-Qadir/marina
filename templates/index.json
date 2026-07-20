@@ -121,8 +121,9 @@
         "btn_label": "Shop Now",
         "btn_link": "",
         "bg_color": "#F7E5C8",
-        "padding_top": 40,
-        "padding_bottom": 40
+        "image": "shopify://shop_images/sleeping-girl.png",
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "cm_product_tabs_rUzKzY": {
