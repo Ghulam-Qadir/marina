@@ -101,9 +101,10 @@
         "eyebrow": "OUR BEST",
         "heading": "BEST SELLERS",
         "description": "",
+        "promo_image": "shopify://shop_images/saller-half-bg.png",
         "promo_small": "Shop Our Best Sellers",
         "promo_large": "BestDiscounts",
-        "collection": "",
+        "collection": "hydrogen",
         "padding_top": 40,
         "padding_bottom": 40
       }
