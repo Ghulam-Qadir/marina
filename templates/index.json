@@ -48,6 +48,65 @@
         "show_text_below": false
       }
     },
+    "brand_section_ppMbc4": {
+      "type": "brand-section",
+      "blocks": {
+        "logo_XkyHVz": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Main_b13ad453-477c-4ed1-9b43-81f3345adfd6.jpg"
+          }
+        },
+        "logo_C3E6VY": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Main_b9e0da7f-db89-4d41-83f0-7f417b02831d.jpg"
+          }
+        },
+        "logo_rH6w6t": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Main_589fc064-24a2-4236-9eaf-13b2bd35d21d.jpg"
+          }
+        },
+        "logo_4weDnR": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Main_f44a9605-cd62-464d-b095-d45cdaa0d0d7.jpg"
+          }
+        },
+        "logo_mw4QqQ": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/Main_0a40b01b-5021-48c1-80d1-aa8ab4876d3d.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "logo_XkyHVz",
+        "logo_C3E6VY",
+        "logo_rH6w6t",
+        "logo_4weDnR",
+        "logo_mw4QqQ"
+      ],
+      "name": "Brand Section",
+      "settings": {
+        "eyebrow": "SHOP BY BRAND",
+        "heading": "DISCOVER TOP NAMES YOU TRUST",
+        "description": "Designed to bring you quality, comfort, and lasting value, choose from the best in the business.",
+        "discount_get": "GET",
+        "discount_percent": "25%",
+        "discount_off": "Off",
+        "discount_sub": "On All Mattresses",
+        "financing_desc": "Make your dream mattress a reality with our flexible financing options.",
+        "financing_get": "",
+        "financing_percent": "0%",
+        "financing_off": "Interest",
+        "financing_sub": "FINANCING AVAILABLE",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -122,71 +181,12 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
-    },
-    "brand_section_ppMbc4": {
-      "type": "brand-section",
-      "blocks": {
-        "logo_XkyHVz": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Main_b13ad453-477c-4ed1-9b43-81f3345adfd6.jpg"
-          }
-        },
-        "logo_C3E6VY": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Main_b9e0da7f-db89-4d41-83f0-7f417b02831d.jpg"
-          }
-        },
-        "logo_rH6w6t": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Main_589fc064-24a2-4236-9eaf-13b2bd35d21d.jpg"
-          }
-        },
-        "logo_4weDnR": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Main_f44a9605-cd62-464d-b095-d45cdaa0d0d7.jpg"
-          }
-        },
-        "logo_mw4QqQ": {
-          "type": "logo",
-          "settings": {
-            "logo": "shopify://shop_images/Main_0a40b01b-5021-48c1-80d1-aa8ab4876d3d.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "logo_XkyHVz",
-        "logo_C3E6VY",
-        "logo_rH6w6t",
-        "logo_4weDnR",
-        "logo_mw4QqQ"
-      ],
-      "name": "Brand Section",
-      "settings": {
-        "eyebrow": "SHOP BY BRAND",
-        "heading": "DISCOVER TOP NAMES YOU TRUST",
-        "description": "Designed to bring you quality, comfort, and lasting value, choose from the best in the business.",
-        "discount_get": "GET",
-        "discount_percent": "25%",
-        "discount_off": "Off",
-        "discount_sub": "On All Mattresses",
-        "financing_desc": "Make your dream mattress a reality with our flexible financing options.",
-        "financing_get": "",
-        "financing_percent": "0%",
-        "financing_off": "Interest",
-        "financing_sub": "FINANCING AVAILABLE",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
     "image_banner",
+    "brand_section_ppMbc4",
     "featured_collection",
-    "cta_banner_RM36LL",
-    "brand_section_ppMbc4"
+    "cta_banner_RM36LL"
   ]
 }
