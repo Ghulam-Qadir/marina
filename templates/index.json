@@ -121,16 +121,18 @@
       "type": "cm-sleep-cta",
       "name": "CM Sleep CTA",
       "settings": {
-        "eyebrow": "",
+        "eyebrow": "Let’s Find The",
         "heading_top": "",
-        "heading_bottom": "",
+        "main_title": "Perfect Sleep",
+        "heading_bottom": "Solution for you",
         "description": "<p>Finding the perfect mattress is the key to waking up pain-free and fully rested. Whether you struggle with back pain, joint discomfort, or just can’t find the right balance between support and comfort, we’ve got you covered!</p>",
         "btn_label": "Shop Now",
         "btn_link": "shopify://collections/hydrogen",
+        "subtext": "Take our quick 2-minute quiz to discover the mattress that's designed for your unique sleep needs.",
         "bg_color": "#f7e5c8",
         "image": "shopify://shop_images/sleeping-girl.png",
-        "padding_top": 0,
-        "padding_bottom": 0
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     },
     "cm_product_tabs_rUzKzY": {
