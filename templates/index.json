@@ -110,6 +110,21 @@
         "padding_bottom": 40
       }
     },
+    "cm_sleep_cta_gNWtdx": {
+      "type": "cm-sleep-cta",
+      "name": "CM Sleep CTA",
+      "settings": {
+        "eyebrow": "PERFECT SLEEP",
+        "heading_top": "Perfect",
+        "heading_bottom": "Sleep",
+        "description": "",
+        "btn_label": "Shop Now",
+        "btn_link": "",
+        "bg_color": "#F7E5C8",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "cm_product_tabs_rUzKzY": {
       "type": "cm-product-tabs",
       "blocks": {
@@ -168,6 +183,7 @@
     "cm_hero_JJ3Qet",
     "brand_section_ppMbc4",
     "cm_best_sellers_zKJjrC",
+    "cm_sleep_cta_gNWtdx",
     "cm_product_tabs_rUzKzY"
   ]
 }
