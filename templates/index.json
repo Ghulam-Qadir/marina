@@ -116,7 +116,7 @@
           "type": "tab",
           "settings": {
             "tab_name": "Mattress",
-            "collection": "",
+            "collection": "automated-collection",
             "view_all_link": "",
             "view_all_text": "View All"
           }
@@ -125,7 +125,7 @@
           "type": "tab",
           "settings": {
             "tab_name": "Adjustable Bases",
-            "collection": "",
+            "collection": "automated-collection",
             "view_all_link": "",
             "view_all_text": "View All"
           }
@@ -134,7 +134,7 @@
           "type": "tab",
           "settings": {
             "tab_name": "Soft Pillows",
-            "collection": "",
+            "collection": "hydrogen",
             "view_all_link": "",
             "view_all_text": "View All"
           }
@@ -143,7 +143,7 @@
           "type": "tab",
           "settings": {
             "tab_name": "Bedding",
-            "collection": "",
+            "collection": "automated-collection",
             "view_all_link": "",
             "view_all_text": "View All"
           }
