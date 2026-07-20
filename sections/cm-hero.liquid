@@ -1,0 +1,347 @@
+{{ 'cm-hero.css' | asset_url | stylesheet_tag }}
+
+<section class="cm-hero" id="CMHero-{{ section.id }}">
+  <div class="cm-container">
+    {%- comment -%} Left: Content {%- endcomment -%}
+    <div class="cm-hero-content">
+      {%- if section.settings.script_title != blank or section.settings.main_title != blank -%}
+        <h1 class="cm-hero-title">
+          {%- if section.settings.script_title != blank -%}
+            <span class="title-script">{{ section.settings.script_title }}</span>
+          {%- endif -%}
+          {%- if section.settings.main_title != blank -%}
+            <span class="title-sans">{{ section.settings.main_title }}</span>
+          {%- endif -%}
+        </h1>
+      {%- endif -%}
+
+      {%- if section.settings.description != blank -%}
+        <div class="cm-hero-description">{{ section.settings.description }}</div>
+      {%- endif -%}
+
+      {%- comment -%} Badge cards {%- endcomment -%}
+      <div class="cm-hero-badges">
+        {%- if section.settings.badge_icon_1 != blank -%}
+          <div class="cm-hero-badge">
+            <div class="cm-hero-badge-icon">
+              <img src="{{ section.settings.badge_icon_1 | image_url: width: 80 }}" alt="{{ section.settings.badge_icon_1.alt | escape }}" width="24" height="24" loading="lazy">
+            </div>
+            <div class="cm-hero-badge-label">
+              {%- if section.settings.badge_label_1_top != blank -%}
+                <span class="label-top">{{ section.settings.badge_label_1_top }}</span>
+              {%- endif -%}
+              {%- if section.settings.badge_label_1_bottom != blank -%}
+                <span class="label-bottom">{{ section.settings.badge_label_1_bottom }}</span>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.badge_icon_2 != blank -%}
+          <div class="cm-hero-badge">
+            <div class="cm-hero-badge-icon">
+              <img src="{{ section.settings.badge_icon_2 | image_url: width: 80 }}" alt="{{ section.settings.badge_icon_2.alt | escape }}" width="24" height="24" loading="lazy">
+            </div>
+            <div class="cm-hero-badge-label">
+              {%- if section.settings.badge_label_2_top != blank -%}
+                <span class="label-top">{{ section.settings.badge_label_2_top }}</span>
+              {%- endif -%}
+              {%- if section.settings.badge_label_2_bottom != blank -%}
+                <span class="label-bottom">{{ section.settings.badge_label_2_bottom }}</span>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.badge_icon_3 != blank -%}
+          <div class="cm-hero-badge">
+            <div class="cm-hero-badge-icon">
+              <img src="{{ section.settings.badge_icon_3 | image_url: width: 80 }}" alt="{{ section.settings.badge_icon_3.alt | escape }}" width="24" height="24" loading="lazy">
+            </div>
+            <div class="cm-hero-badge-label">
+              {%- if section.settings.badge_label_3_top != blank -%}
+                <span class="label-top">{{ section.settings.badge_label_3_top }}</span>
+              {%- endif -%}
+              {%- if section.settings.badge_label_3_bottom != blank -%}
+                <span class="label-bottom">{{ section.settings.badge_label_3_bottom }}</span>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- comment -%} CTA {%- endcomment -%}
+      {%- if section.settings.btn_label != blank -%}
+        <div class="cm-hero-actions">
+          <a href="{{ section.settings.btn_link }}" class="cm-hero-btn{% if section.settings.btn_style == 'secondary' %} cm-hero-btn--secondary{% endif %}">
+            {{ section.settings.btn_label }}
+            <span class="arrow">&#8594;</span>
+          </a>
+          <p class="cm-hero-quiz-subtext">Discover your perfect mattress in just 2 minutes.</p>
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} Right: Media {%- endcomment -%}
+    <div class="cm-hero-media">
+      {%- if section.settings.hero_image != blank -%}
+        {{ section.settings.hero_image | image_url: width: 1600 | image_tag: width: section.settings.hero_image.width, height: section.settings.hero_image.height, sizes: "100vw", widths: "375, 550, 750, 1100, 1500", loading: "lazy" }}
+      {%- else -%}
+        {{ 'lifestyle-2' | placeholder_svg_tag: 'placeholder-svg' }}
+      {%- endif -%}
+    </div>
+  </div>
+
+  {%- comment -%} Bottom features strip {%- endcomment -%}
+  <div class="cm-hero-features-wrap cm-container">
+    <div class="cm-hero-features">
+      {%- for i in (1..4) -%}
+        {%- assign icon_key = 'feature_icon_' | append: i -%}
+        {%- assign small_key = 'feature_small_' | append: i -%}
+        {%- assign big_key = 'feature_big_' | append: i -%}
+        {%- assign icon = section.settings[icon_key] -%}
+        {%- assign small_text = section.settings[small_key] -%}
+        {%- assign big_text = section.settings[big_key] -%}
+
+        {%- if icon != blank or small_text != blank or big_text != blank -%}
+          <div class="cm-hero-feature">
+            {%- if icon != blank -%}
+              <div class="cm-hero-feature-icon">
+                <img src="{{ icon | image_url: width: 80 }}" alt="{{ icon.alt | escape }}" width="26" height="26" loading="lazy">
+              </div>
+            {%- endif -%}
+            <div class="cm-hero-feature-label">
+              {%- if small_text != blank -%}
+                <span class="label-small">{{ small_text }}</span>
+              {%- endif -%}
+              {%- if big_text != blank -%}
+                <span class="label-big">{{ big_text }}</span>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "CM Hero",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Title"
+    },
+    {
+      "type": "text",
+      "id": "script_title",
+      "label": "Script title",
+      "default": "Sleep Like"
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Main title",
+      "default": "You're on a Cloud"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Experience comfort backed by science and loved by <strong>70,000+ </strong> customers.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Hero image"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Button label",
+      "default": "Take the Mattress Quiz"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "btn_style",
+      "label": "Button style",
+      "options": [
+        { "value": "primary", "label": "Primary" },
+        { "value": "secondary", "label": "Secondary" }
+      ],
+      "default": "primary"
+    },
+    {
+      "type": "header",
+      "content": "Badge card 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "badge_icon_1",
+      "label": "Badge icon"
+    },
+    {
+      "type": "text",
+      "id": "badge_label_1_top",
+      "label": "Top label",
+      "default": "FREE"
+    },
+    {
+      "type": "text",
+      "id": "badge_label_1_bottom",
+      "label": "Bottom label",
+      "default": "SHIPPING"
+    },
+    {
+      "type": "header",
+      "content": "Badge card 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "badge_icon_2",
+      "label": "Badge icon"
+    },
+    {
+      "type": "text",
+      "id": "badge_label_2_top",
+      "label": "Top label",
+      "default": "100"
+    },
+    {
+      "type": "text",
+      "id": "badge_label_2_bottom",
+      "label": "Bottom label",
+      "default": "NIGHTS TRIAL"
+    },
+    {
+      "type": "header",
+      "content": "Badge card 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "badge_icon_3",
+      "label": "Badge icon"
+    },
+    {
+      "type": "text",
+      "id": "badge_label_3_top",
+      "label": "Top label",
+      "default": "EXPERT"
+    },
+    {
+      "type": "text",
+      "id": "badge_label_3_bottom",
+      "label": "Bottom label",
+      "default": "GUIDANCE"
+    },
+    {
+      "type": "header",
+      "content": "Bottom feature 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_icon_1",
+      "label": "Feature icon"
+    },
+    {
+      "type": "text",
+      "id": "feature_small_1",
+      "label": "Small text",
+      "default": "FREE"
+    },
+    {
+      "type": "text",
+      "id": "feature_big_1",
+      "label": "Big text",
+      "default": "SHIPPING"
+    },
+    {
+      "type": "header",
+      "content": "Bottom feature 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_icon_2",
+      "label": "Feature icon"
+    },
+    {
+      "type": "text",
+      "id": "feature_small_2",
+      "label": "Small text",
+      "default": "EASY"
+    },
+    {
+      "type": "text",
+      "id": "feature_big_2",
+      "label": "Big text",
+      "default": "RETURN"
+    },
+    {
+      "type": "header",
+      "content": "Bottom feature 3"
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_icon_3",
+      "label": "Feature icon"
+    },
+    {
+      "type": "text",
+      "id": "feature_small_3",
+      "label": "Small text",
+      "default": "QUICK"
+    },
+    {
+      "type": "text",
+      "id": "feature_big_3",
+      "label": "Big text",
+      "default": "FINANCING"
+    },
+    {
+      "type": "header",
+      "content": "Bottom feature 4"
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_icon_4",
+      "label": "Feature icon"
+    },
+    {
+      "type": "text",
+      "id": "feature_small_4",
+      "label": "Small text",
+      "default": "SECURE"
+    },
+    {
+      "type": "text",
+      "id": "feature_big_4",
+      "label": "Big text",
+      "default": "CHECKOUT"
+    }
+  ],
+  "presets": [
+    {
+      "name": "CM Hero"
+    }
+  ]
+}
+{% endschema %}

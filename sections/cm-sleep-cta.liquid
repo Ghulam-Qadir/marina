@@ -1,0 +1,131 @@
+{{ 'cm-sleep-cta.css' | asset_url | stylesheet_tag }}
+
+<div class="cm-sleep-section" style="background-color: {{ section.settings.bg_color }};">
+  <div class="cm-sleep-container">
+    <div class="cm-sleep-content">
+      {% if section.settings.eyebrow != blank %}
+        <span class="cm-sleep-eyebrow">{{ section.settings.eyebrow }}</span>
+      {% endif %}
+
+      {% if section.settings.heading_top != blank or section.settings.heading_bottom != blank %}
+        <h2 class="cm-sleep-heading">
+          <span class="cm-sleep-bold">
+            {% if section.settings.heading_top != blank %}
+              <span class="top-title">{{ section.settings.heading_top }}</span>
+            {% endif %}
+            {% if section.settings.heading_bottom != blank %}
+              <span class="bottom-title">{{ section.settings.heading_bottom }}</span>
+            {% endif %}
+          </span>
+        </h2>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        <div class="cm-sleep-description">
+          {{ section.settings.description }}
+        </div>
+      {% endif %}
+
+      {% if section.settings.btn_label != blank %}
+        <a href="{{ section.settings.btn_link }}" class="cm-sleep-btn">
+          {{ section.settings.btn_label }}
+        </a>
+      {% endif %}
+    </div>
+
+    <div class="cm-sleep-image-wrap">
+      {% if section.settings.image != blank %}
+        <img
+          src="{{ section.settings.image | image_url: width: 1400 }}"
+          alt="{{ section.settings.image.alt | escape }}"
+          class="cm-sleep-img"
+          width="{{ section.settings.image.width }}"
+          height="{{ section.settings.image.height }}"
+          loading="lazy"
+        >
+      {% else %}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'cm-sleep-img cm-sleep-placeholder' }}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CM Sleep CTA",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "PERFECT SLEEP"
+    },
+    {
+      "type": "text",
+      "id": "heading_top",
+      "label": "Heading Top",
+      "default": "Perfect"
+    },
+    {
+      "type": "text",
+      "id": "heading_bottom",
+      "label": "Heading Bottom",
+      "default": "Sleep"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description"
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Button Label",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#F7E5C8"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "CM Sleep CTA"
+    }
+  ]
+}
+{% endschema %}

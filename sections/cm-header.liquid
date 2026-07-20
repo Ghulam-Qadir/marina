@@ -1,0 +1,371 @@
+{{ 'cm-header.css' | asset_url | stylesheet_tag }}
+
+{%- liquid
+  assign is_homepage = false
+  if request.page_type == 'index'
+    assign is_homepage = true
+  endif
+-%}
+
+<header
+  class="cm-header{% if is_homepage %} cm-header-home{% endif %}"
+  id="cm-header"
+>
+  <div class="cm-header__inner">
+    <a href="{{ routes.root_url }}" class="cm-header__logo-link">
+      {%- if section.settings.logo != blank -%}
+        <img
+          src="{{ section.settings.logo | image_url: width: 300 }}"
+          alt="{{ shop.name | escape }}"
+          class="cm-header__logo"
+          width="{{ section.settings.logo_height | times: section.settings.logo.aspect_ratio | round }}"
+          height="{{ section.settings.logo_height }}"
+          loading="eager"
+        >
+      {%- else -%}
+        <span class="cm-header__logo-text">{{ shop.name }}</span>
+      {%- endif -%}
+    </a>
+
+    <nav class="cm-header__nav" aria-label="{{ 'accessibility.navigation_labels.main_navigation' | t }}">
+      <ul class="cm-header__nav-list">
+        {%- for link in section.settings.menu.links -%}
+          {%- if link.links != blank -%}
+            <li class="cm-header__nav-item cm-header__nav-item--has-dropdown">
+              <button
+                type="button"
+                class="cm-header__nav-link cm-header__nav-link--toggle"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                {{ link.title }}
+                <svg class="cm-header__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <ul class="cm-header__dropdown">
+                {%- for childlink in link.links -%}
+                  <li class="cm-header__dropdown-item">
+                    <a href="{{ childlink.url }}" class="cm-header__dropdown-link">
+                      {{ childlink.title }}
+                    </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </li>
+          {%- else -%}
+            <li class="cm-header__nav-item">
+              <a href="{{ link.url }}" class="cm-header__nav-link">
+                {{ link.title }}
+              </a>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      </ul>
+    </nav>
+
+    <div class="cm-header__actions">
+      {%- if section.settings.show_search -%}
+        <a href="{{ routes.search_url }}" class="cm-header__icon-link" aria-label="{{ 'general.search.search' | t }}">
+          <svg class="cm-header__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+            <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </a>
+      {%- endif -%}
+
+      {%- if section.settings.show_account -%}
+        <a
+          href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+          class="cm-header__icon-link"
+          aria-label="{{ 'customer.account_fallback' | t }}"
+        >
+          <svg class="cm-header__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+            <path d="M4 21C4 16.5817 7.58172 13 12 13C16.4183 13 20 16.5817 20 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </a>
+      {%- endif -%}
+
+      {%- if section.settings.show_wishlist -%}
+        <a href="{{ routes.root_url }}pages/wishlist" class="cm-header__icon-link cm-header__icon-link--wishlist" aria-label="Wishlist">
+          <svg class="cm-header__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" stroke="currentColor" stroke-width="2" fill="none"/>
+          </svg>
+        </a>
+      {%- endif -%}
+
+      <a href="{{ routes.cart_url }}" class="cm-header__icon-link cm-header__icon-link--cart" aria-label="{{ 'templates.cart.cart' | t }}">
+        <svg class="cm-header__icon" width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"/>
+          <path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        {%- if cart.item_count > 0 -%}
+          <span class="cm-header__cart-count" aria-hidden="true">{{ cart.item_count }}</span>
+        {%- endif -%}
+      </a>
+    </div>
+
+    <button
+      class="cm-header__hamburger"
+      type="button"
+      aria-label="Menu"
+      aria-expanded="false"
+      aria-controls="cm-mobile-menu"
+    >
+      <span class="cm-header__hamburger-line"></span>
+      <span class="cm-header__hamburger-line"></span>
+      <span class="cm-header__hamburger-line"></span>
+    </button>
+  </div>
+
+  <div
+    class="cm-header__mobile-menu"
+    id="cm-mobile-menu"
+    aria-hidden="true"
+  >
+    <div class="cm-header__mobile-backdrop"></div>
+    <div class="cm-header__mobile-panel">
+      <div class="cm-header__mobile-top">
+        <a href="{{ routes.root_url }}" class="cm-header__mobile-logo">
+          {%- if section.settings.logo != blank -%}
+            <img
+              src="{{ section.settings.logo | image_url: width: 200 }}"
+              alt="{{ shop.name | escape }}"
+              height="{{ section.settings.logo_height }}"
+              loading="eager"
+            >
+          {%- else -%}
+            <span class="cm-header__logo-text">{{ shop.name }}</span>
+          {%- endif -%}
+        </a>
+        <button
+          class="cm-header__mobile-close"
+          type="button"
+          aria-label="Close menu"
+          aria-expanded="false"
+          aria-controls="cm-mobile-menu"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <nav class="cm-header__mobile-nav" aria-label="Mobile navigation">
+        <ul class="cm-header__mobile-nav-list">
+          {%- for link in section.settings.menu.links -%}
+            {%- if link.links != blank -%}
+              <li class="cm-header__mobile-nav-item cm-header__mobile-nav-item--has-sub">
+                <button
+                  type="button"
+                  class="cm-header__mobile-nav-link cm-header__mobile-nav-link--toggle"
+                  aria-expanded="false"
+                >
+                  {{ link.title }}
+                  <svg class="cm-header__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+                <ul class="cm-header__mobile-submenu">
+                  {%- for childlink in link.links -%}
+                    <li class="cm-header__mobile-submenu-item">
+                      <a href="{{ childlink.url }}" class="cm-header__mobile-submenu-link">
+                        {{ childlink.title }}
+                      </a>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </li>
+            {%- else -%}
+              <li class="cm-header__mobile-nav-item">
+                <a href="{{ link.url }}" class="cm-header__mobile-nav-link">
+                  {{ link.title }}
+                </a>
+              </li>
+            {%- endif -%}
+          {%- endfor -%}
+        </ul>
+      </nav>
+
+      <div class="cm-header__mobile-bottom">
+        {%- if section.settings.show_account -%}
+          <a
+            href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+            class="cm-header__mobile-action"
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+              <path d="M4 21C4 16.5817 7.58172 13 12 13C16.4183 13 20 16.5817 20 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>{{ 'customer.account_fallback' | t }}</span>
+          </a>
+        {%- endif -%}
+        {%- if section.settings.show_search -%}
+          <a href="{{ routes.search_url }}" class="cm-header__mobile-action">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+              <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            <span>{{ 'general.search.search' | t }}</span>
+          </a>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="cm-header__bottom-nav" aria-label="Mobile bottom navigation">
+  <a href="{{ routes.root_url }}" class="cm-header__bottom-nav-link" aria-label="Home">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>Home</span>
+  </a>
+  <a href="{{ routes.search_url }}" class="cm-header__bottom-nav-link" aria-label="Search">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+      <path d="M16.5 16.5L21 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <span>Search</span>
+  </a>
+  <a
+    href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+    class="cm-header__bottom-nav-link"
+    aria-label="Account"
+  >
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="2"/>
+      <path d="M4 21C4 16.5817 7.58172 13 12 13C16.4183 13 20 16.5817 20 21" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <span>Account</span>
+  </a>
+  <a href="{{ routes.cart_url }}" class="cm-header__bottom-nav-link cm-header__bottom-nav-link--cart" aria-label="Cart">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M6 2L3 6V20C3 20.5304 3.21071 21.0391 3.58579 21.4142C3.96086 21.7893 4.46957 22 5 22H19C19.5304 22 20.0391 21.7893 20.4142 21.4142C20.7893 21.0391 21 20.5304 21 20V6L18 2H6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <line x1="3" y1="6" x2="21" y2="6" stroke="currentColor" stroke-width="2"/>
+      <path d="M16 10C16 11.0609 15.5786 12.0783 14.8284 12.8284C14.0783 13.5786 13.0609 14 12 14C10.9391 14 9.92172 13.5786 9.17157 12.8284C8.42143 12.0783 8 11.0609 8 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    {%- if cart.item_count > 0 -%}
+      <span class="cm-header__bottom-cart-count">{{ cart.item_count }}</span>
+    {%- endif -%}
+    <span>Cart</span>
+  </a>
+</nav>
+
+<script>
+  (function() {
+    const header = document.getElementById('cm-header');
+    const hamburger = header.querySelector('.cm-header__hamburger');
+    const mobileMenu = document.getElementById('cm-mobile-menu');
+    const mobileClose = header.querySelector('.cm-header__mobile-close');
+    const mobileBackdrop = header.querySelector('.cm-header__mobile-backdrop');
+    const mobileToggles = header.querySelectorAll('.cm-header__mobile-nav-link--toggle');
+    const desktopToggles = header.querySelectorAll('.cm-header__nav-link--toggle');
+
+    function openMobileMenu() {
+      mobileMenu.classList.add('is-open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      mobileClose.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('is-open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileClose.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', openMobileMenu);
+    mobileClose.addEventListener('click', closeMobileMenu);
+    mobileBackdrop.addEventListener('click', closeMobileMenu);
+
+    mobileToggles.forEach(function(toggle) {
+      toggle.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', String(!expanded));
+        this.closest('.cm-header__mobile-nav-item--has-sub').classList.toggle('is-open');
+      });
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
+        closeMobileMenu();
+      }
+    });
+
+    if (Shopify.designMode) {
+      document.addEventListener('shopify:block:select', function(e) {
+        if (e.target.closest('#cm-header')) {
+          openMobileMenu();
+        }
+      });
+      document.addEventListener('shopify:block:deselect', function(e) {
+        if (e.target.closest('#cm-header')) {
+          closeMobileMenu();
+        }
+      });
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "CM Header",
+  "tag": "header",
+  "class": "section-header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo image"
+    },
+    {
+      "type": "range",
+      "id": "logo_height",
+      "min": 50,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "label": "Logo height",
+      "default": 80
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "Menu"
+    },
+    {
+      "type": "header",
+      "content": "Icon visibility"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search",
+      "default": true,
+      "label": "Show search icon"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_account",
+      "default": true,
+      "label": "Show account icon"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_wishlist",
+      "default": true,
+      "label": "Show wishlist icon"
+    }
+  ],
+  "presets": [
+    {
+      "name": "CM Header"
+    }
+  ]
+}
+{% endschema %}

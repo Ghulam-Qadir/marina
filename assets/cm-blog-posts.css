@@ -1,0 +1,138 @@
+.cm-blog-section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cm-blog-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cm-blog-eyebrow {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #666;
+}
+
+.cm-blog-heading {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 8px 0 0;
+}
+
+.cm-blog-description {
+  font-size: 15px;
+  color: #555;
+  max-width: 600px;
+  margin: 12px auto 0;
+  line-height: 1.6;
+}
+
+/* Blog Row */
+.cm-blog-row {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cm-blog-card {
+  max-width: 33%;
+  flex: 0 0 33%;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cm-blog-image {
+  overflow: hidden;
+}
+
+.cm-blog-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.cm-blog-card:hover .cm-blog-image img {
+  transform: scale(1.05);
+}
+
+.cm-blog-content {
+  padding: 22px 10px 24px;
+}
+
+.cm-blog-tag {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  font-size: 13px;
+  padding: 6px 14px;
+  border-radius: 18px;
+  margin-bottom: 12px;
+}
+
+.cm-blog-title {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.cm-blog-title a {
+  color: #0d0d0d;
+  text-decoration: none;
+}
+
+.cm-blog-title a:hover {
+  text-decoration: underline;
+}
+
+.cm-blog-excerpt {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+
+.cm-blog-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cm-blog-author-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  flex-shrink: 0;
+}
+
+.cm-blog-author {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.cm-blog-date {
+  font-size: 13px;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .cm-blog-card {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .cm-blog-heading {
+    font-size: 28px;
+  }
+}

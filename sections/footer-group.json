@@ -1,35 +1,155 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
-  "name": "t:sections.footer.name",
+  "name": "CM Footer",
   "type": "footer",
   "sections": {
-    "footer": {
-      "type": "footer",
+    "cm-footer": {
+      "type": "cm-footer",
       "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
-        "enable_follow_on_shop": true,
-        "show_social": true,
-        "enable_country_selector": true,
-        "enable_language_selector": true,
-        "payment_enable": true,
-        "show_policy": true,
-        "margin_top": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
+        "heading": "We Continue to Set the Standard for Restful Nights.",
+        "description": "Cloudy Mattress was founded on the revolutionary idea of delivering comfort and quality. Our goal is simple: to provide the best customer service with the fastest shipping possible.",
+        "phone_number": "800-540-9851",
+        "phone_hours": "Mon\u2013Fri 10am \u2013 5pm CT",
+        "address": "Address \u2013 6075 Old Canton Rd, Jackson MS 39211\nPhone Number \u2013 800-540-9851",
+        "newsletter_eyebrow": "SIGN-UP TO OUR",
+        "newsletter_title": "NEWSLETTER AND SAVE 10% ON",
+        "newsletter_subtext": "Your first purchase"
+      },
+      "blocks": {
+        "brand-ashley": {
+          "type": "brand_link",
+          "settings": { "label": "Ashley" }
+        },
+        "brand-dreamcloud": {
+          "type": "brand_link",
+          "settings": { "label": "Dream Cloud" }
+        },
+        "brand-ghostbed": {
+          "type": "brand_link",
+          "settings": { "label": "Ghostbed" }
+        },
+        "brand-diamond": {
+          "type": "brand_link",
+          "settings": { "label": "Diamond" }
+        },
+        "brand-corsicana": {
+          "type": "brand_link",
+          "settings": { "label": "Corsicana" }
+        },
+        "brand-sleeptone": {
+          "type": "brand_link",
+          "settings": { "label": "Sleeptone" }
+        },
+        "brand-american-star": {
+          "type": "brand_link",
+          "settings": { "label": "American Star" }
+        },
+        "brand-malouf": {
+          "type": "brand_link",
+          "settings": { "label": "Malouf" }
+        },
+        "brand-bedgear": {
+          "type": "brand_link",
+          "settings": { "label": "Bedgear" }
+        },
+        "brand-blusleep": {
+          "type": "brand_link",
+          "settings": { "label": "Blu Sleep" }
+        },
+        "brand-hiend": {
+          "type": "brand_link",
+          "settings": { "label": "Hiend" }
+        },
+        "brand-bundle": {
+          "type": "brand_link",
+          "settings": { "label": "Bundle Of Dream" }
+        },
+        "brand-72hours": {
+          "type": "brand_link",
+          "settings": { "label": "72 Hours Sale" }
+        },
+        "brand-closeout": {
+          "type": "brand_link",
+          "settings": { "label": "Closeout" }
+        },
+        "info-search": {
+          "type": "info_link",
+          "settings": { "label": "Search", "link": "/search" }
+        },
+        "info-contact": {
+          "type": "info_link",
+          "settings": { "label": "Contact Us", "link": "/pages/contact" }
+        },
+        "info-blogs": {
+          "type": "info_link",
+          "settings": { "label": "Blogs", "link": "/blogs/news" }
+        },
+        "info-faq": {
+          "type": "info_link",
+          "settings": { "label": "FAQ's", "link": "/pages/faq" }
+        },
+        "info-shipping": {
+          "type": "info_link",
+          "settings": { "label": "Shipping and Delivery", "link": "/pages/shipping" }
+        },
+        "info-returns": {
+          "type": "info_link",
+          "settings": { "label": "Return Policy", "link": "/pages/return-policy" }
+        },
+        "info-trial": {
+          "type": "info_link",
+          "settings": { "label": "120 Days Sleep Trial", "link": "/pages/sleep-trial" }
+        },
+        "company-about": {
+          "type": "company_link",
+          "settings": { "label": "About us", "link": "/pages/about" }
+        },
+        "company-financing": {
+          "type": "company_link",
+          "settings": { "label": "Financing", "link": "/pages/financing" }
+        },
+        "company-privacy": {
+          "type": "company_link",
+          "settings": { "label": "Privacy Policy", "link": "/policies/privacy-policy" }
+        },
+        "company-terms": {
+          "type": "company_link",
+          "settings": { "label": "Terms of service", "link": "/policies/terms-of-service" }
+        },
+        "company-warranty": {
+          "type": "company_link",
+          "settings": { "label": "Warranty", "link": "/pages/warranty" }
+        },
+        "social-facebook": {
+          "type": "social_link",
+          "settings": { "platform": "facebook", "url": "#" }
+        },
+        "social-youtube": {
+          "type": "social_link",
+          "settings": { "platform": "youtube", "url": "#" }
+        },
+        "social-instagram": {
+          "type": "social_link",
+          "settings": { "platform": "instagram", "url": "#" }
+        },
+        "social-twitter": {
+          "type": "social_link",
+          "settings": { "platform": "x", "url": "#" }
+        }
+      },
+      "block_order": [
+        "brand-ashley", "brand-dreamcloud", "brand-ghostbed", "brand-diamond",
+        "brand-corsicana", "brand-sleeptone", "brand-american-star", "brand-malouf",
+        "brand-bedgear", "brand-blusleep", "brand-hiend", "brand-bundle",
+        "brand-72hours", "brand-closeout",
+        "info-search", "info-contact", "info-blogs", "info-faq",
+        "info-shipping", "info-returns", "info-trial",
+        "company-about", "company-financing", "company-privacy",
+        "company-terms", "company-warranty",
+        "social-facebook", "social-youtube", "social-instagram", "social-twitter"
+      ]
     }
   },
   "order": [
-    "footer"
+    "cm-footer"
   ]
 }
