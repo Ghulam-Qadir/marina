@@ -5,7 +5,6 @@
 }
 
 .cm-sleep-wrap {
-  max-width: 1200px;
   min-height: 800px;
   margin: 0 auto;
   display: flex;
@@ -14,7 +13,6 @@
 
 .cm-sleep-container {
   background: #F7E5C8;
-  max-width: 1200px;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
