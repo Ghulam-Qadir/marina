@@ -250,6 +250,7 @@
         "social-instagram"
       ],
       "settings": {
+        "footer_logo": "shopify://shop_images/footer-logo.png",
         "heading": "We Continue to Set the Standard for Restful Nights.",
         "description": "Cloudy Mattress was founded on the revolutionary idea of delivering comfort and quality. Our goal is simple: to provide the best customer service with the fastest shipping possible.",
         "phone_number": "800-540-9851",
