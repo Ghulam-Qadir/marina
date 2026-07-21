@@ -43,6 +43,39 @@
         "feature_big_4": "CHECKOUT"
       }
     },
+    "cm_best_sellers_zKJjrC": {
+      "type": "cm-best-sellers",
+      "name": "CM Best Sellers",
+      "settings": {
+        "eyebrow": "OUR BEST",
+        "heading": "BEST SELLERS",
+        "description": "",
+        "promo_image": "shopify://shop_images/saller-half-bg.png",
+        "promo_small": "Shop Our Best Sellers",
+        "promo_large": "BestDiscounts",
+        "collection": "hydrogen",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "cm_sleep_cta_gNWtdx": {
+      "type": "cm-sleep-cta",
+      "name": "CM Sleep CTA",
+      "settings": {
+        "eyebrow": "Let’s Find The",
+        "heading_top": "",
+        "main_title": "Perfect Sleep",
+        "heading_bottom": "Solution for you",
+        "description": "<p>Finding the perfect mattress is the key to waking up pain-free and fully rested. Whether you struggle with back pain, joint discomfort, or just can’t find the right balance between support and comfort, we’ve got you covered!</p>",
+        "btn_label": "Shop Now",
+        "btn_link": "shopify://collections/hydrogen",
+        "subtext": "Take our quick 2-minute quiz to discover the mattress that's designed for your unique sleep needs.",
+        "bg_color": "#f7e5c8",
+        "image": "shopify://shop_images/sleeping-girl.png",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
     "brand_section_ppMbc4": {
       "type": "brand-section",
       "blocks": {
@@ -100,39 +133,6 @@
         "financing_sub": "FINANCING AVAILABLE",
         "padding_top": 40,
         "padding_bottom": 52
-      }
-    },
-    "cm_best_sellers_zKJjrC": {
-      "type": "cm-best-sellers",
-      "name": "CM Best Sellers",
-      "settings": {
-        "eyebrow": "OUR BEST",
-        "heading": "BEST SELLERS",
-        "description": "",
-        "promo_image": "shopify://shop_images/saller-half-bg.png",
-        "promo_small": "Shop Our Best Sellers",
-        "promo_large": "BestDiscounts",
-        "collection": "hydrogen",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "cm_sleep_cta_gNWtdx": {
-      "type": "cm-sleep-cta",
-      "name": "CM Sleep CTA",
-      "settings": {
-        "eyebrow": "Let’s Find The",
-        "heading_top": "",
-        "main_title": "Perfect Sleep",
-        "heading_bottom": "Solution for you",
-        "description": "<p>Finding the perfect mattress is the key to waking up pain-free and fully rested. Whether you struggle with back pain, joint discomfort, or just can’t find the right balance between support and comfort, we’ve got you covered!</p>",
-        "btn_label": "Shop Now",
-        "btn_link": "shopify://collections/hydrogen",
-        "subtext": "Take our quick 2-minute quiz to discover the mattress that's designed for your unique sleep needs.",
-        "bg_color": "#f7e5c8",
-        "image": "shopify://shop_images/sleeping-girl.png",
-        "padding_top": 100,
-        "padding_bottom": 100
       }
     },
     "cm_product_tabs_rUzKzY": {
@@ -204,9 +204,9 @@
   },
   "order": [
     "cm_hero_JJ3Qet",
-    "brand_section_ppMbc4",
     "cm_best_sellers_zKJjrC",
     "cm_sleep_cta_gNWtdx",
+    "brand_section_ppMbc4",
     "cm_product_tabs_rUzKzY",
     "cm_blog_posts_iGFmxg"
   ]
