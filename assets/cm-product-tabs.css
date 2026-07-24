@@ -342,6 +342,7 @@
 @media (max-width: 390px) {
   .cm-product-brand-row{
     flex-direction: column !important;
+    gap:10px;
   }
 }
 
