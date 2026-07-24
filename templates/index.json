@@ -184,6 +184,7 @@
       ],
       "name": "CM Product Tabs",
       "settings": {
+        "badge_image": "shopify://shop_images/improve-sleep_1.png",
         "eyebrow": "PRODUCTS TO",
         "heading": "IMPROVE YOUR SLEEP",
         "description": "Discover our curated selection of sleep essentials designed to give you the rest you deserve."
