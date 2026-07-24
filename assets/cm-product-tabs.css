@@ -387,6 +387,7 @@
 
   .cm-pt-grid {
     gap: 16px;
+    align-items: center;
   }
 }
 
