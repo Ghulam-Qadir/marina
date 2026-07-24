@@ -384,7 +384,7 @@
 }
 
 @media (max-width: 375px) {
-  .cm-product-shop-now{
-flex-direction: column;
+  .cm-product-brand-row{
+    flex-direction: column !important;
   }
 }
