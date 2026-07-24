@@ -385,6 +385,6 @@
 
 @media (max-width: 376px) {
   .cm-product-shop-now{
-
+flex-direction: column;
   }
 }
