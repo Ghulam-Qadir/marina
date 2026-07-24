@@ -246,7 +246,7 @@
 /* ---- Responsive ---- */
 @media (max-width: 760px) {
   .cm-hero {
-    padding: 8rem 0 3rem;
+    padding: 2rem 0 1rem;
   }
 
   .cm-hero .cm-container {
