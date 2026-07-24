@@ -82,31 +82,31 @@
         "logo_XkyHVz": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Main_b13ad453-477c-4ed1-9b43-81f3345adfd6.jpg"
+            "logo": "shopify://shop_images/bedgear.png"
           }
         },
         "logo_C3E6VY": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Main_b9e0da7f-db89-4d41-83f0-7f417b02831d.jpg"
+            "logo": "shopify://shop_images/idealbed.png"
           }
         },
         "logo_rH6w6t": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Main_589fc064-24a2-4236-9eaf-13b2bd35d21d.jpg"
+            "logo": "shopify://shop_images/sleeptone.png"
           }
         },
         "logo_4weDnR": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Main_f44a9605-cd62-464d-b095-d45cdaa0d0d7.jpg"
+            "logo": "shopify://shop_images/paypal.png"
           }
         },
         "logo_mw4QqQ": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/Main_0a40b01b-5021-48c1-80d1-aa8ab4876d3d.jpg"
+            "logo": "shopify://shop_images/diamond.png"
           }
         }
       },
@@ -119,6 +119,7 @@
       ],
       "name": "Brand Section",
       "settings": {
+        "badge_image": "shopify://shop_images/improve-sleep_1.png",
         "eyebrow": "SHOP BY BRAND",
         "heading": "DISCOVER TOP NAMES YOU TRUST",
         "description": "Designed to bring you quality, comfort, and lasting value, choose from the best in the business.",
