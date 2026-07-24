@@ -164,8 +164,12 @@
   }
 
   .cm-sleep-bold .bottom-title {
-    font-size: 46px;
+    font-size: 30px;
   }
+
+  .cm-sleep-bold .bottom-title {
+  margin-top: -9px;
+}
 
   .cm-sleep-bold {
     font-size: 46px;
