@@ -1,0 +1,111 @@
+{{ 'cm-about-story.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+
+<div class="cm-about-story section-{{ section.id }}-padding" style="background-color: {{ section.settings.bg_color }};">
+  <div class="cm-about-story-wrap">
+    <div class="cm-about-story-content">
+      {%- if section.settings.eyebrow != blank -%}
+        <span class="cm-about-story-eyebrow">{{ section.settings.eyebrow }}</span>
+      {%- endif -%}
+
+      {%- if section.settings.heading != blank -%}
+        <h2 class="cm-about-story-heading">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.text != blank -%}
+        <div class="cm-about-story-text">
+          {{ section.settings.text }}
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="cm-about-story-image-wrap">
+      {%- if section.settings.image != blank -%}
+        <img
+          src="{{ section.settings.image | image_url: width: 800 }}"
+          alt="{{ section.settings.image.alt | escape }}"
+          class="cm-about-story-img"
+          width="{{ section.settings.image.width }}"
+          height="{{ section.settings.image.height }}"
+          loading="lazy"
+        >
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'cm-about-story-img' }}
+      {%- endif -%}
+      <div class="cm-about-story-image-accent"></div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CM About Story",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "WHO WE ARE"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Born from a passion for better sleep"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Description",
+      "default": "<p>At Cloudy, we believe everyone deserves to wake up feeling refreshed and ready to take on the day. Our journey began with a simple idea: combine cutting-edge sleep science with premium materials to create mattresses that truly transform how you sleep.</p><p>From our first mattress to our full range of sleep solutions, we've helped over 70,000 customers find their perfect night's rest.</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "presets": [
+    {
+      "name": "CM About Story"
+    }
+  ]
+}
+{% endschema %}

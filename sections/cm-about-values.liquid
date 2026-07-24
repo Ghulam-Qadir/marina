@@ -1,0 +1,161 @@
+{{ 'cm-about-values.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+
+<div class="cm-about-values section-{{ section.id }}-padding">
+  <div class="cm-about-values-container">
+    <div class="cm-about-values-header">
+      {%- if section.settings.eyebrow != blank -%}
+        <span class="cm-about-values-eyebrow">{{ section.settings.eyebrow }}</span>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="cm-about-values-heading">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.subtext != blank -%}
+        <p class="cm-about-values-sub">{{ section.settings.subtext }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="cm-about-values-grid">
+      {%- for block in section.blocks -%}
+        <div class="cm-about-value-card" {{ block.shopify_attributes }}>
+          <div class="cm-about-value-icon">
+            {%- if block.settings.icon_image != blank -%}
+              <img
+                src="{{ block.settings.icon_image | image_url: width: 80 }}"
+                alt="{{ block.settings.icon_image.alt | escape }}"
+                width="36"
+                height="36"
+                loading="lazy"
+              >
+            {%- elsif block.settings.icon_svg != blank -%}
+              {{ block.settings.icon_svg }}
+            {%- else -%}
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            {%- endif -%}
+          </div>
+          {%- if block.settings.title != blank -%}
+            <h3 class="cm-about-value-title">{{ block.settings.title }}</h3>
+          {%- endif -%}
+          {%- if block.settings.description != blank -%}
+            <p class="cm-about-value-desc">{{ block.settings.description }}</p>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CM About Values",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "WHAT WE STAND FOR"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "OUR MISSION & VALUES"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Everything we do is driven by our commitment to quality, comfort, and your well-being."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "value",
+      "name": "Value Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Icon Image"
+        },
+        {
+          "type": "textarea",
+          "id": "icon_svg",
+          "label": "Icon SVG (fallback if no image)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Quality First"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "We use only premium materials and rigorous quality standards."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CM About Values",
+      "blocks": [
+        {
+          "type": "value",
+          "settings": {
+            "title": "Quality Craftsmanship",
+            "description": "Every mattress is built with premium materials and attention to detail."
+          }
+        },
+        {
+          "type": "value",
+          "settings": {
+            "title": "Customer First",
+            "description": "Your comfort and satisfaction drive every decision we make."
+          }
+        },
+        {
+          "type": "value",
+          "settings": {
+            "title": "Sleep Science",
+            "description": "Our products are backed by research and designed for better rest."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

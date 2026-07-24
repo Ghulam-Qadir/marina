@@ -1,0 +1,118 @@
+{
+  "sections": {
+    "hero": {
+      "type": "cm-about-hero",
+      "name": "About Hero",
+      "settings": {
+        "eyebrow": "OUR STORY",
+        "title": "The Cloudy Story",
+        "subtitle": "We started with a simple mission: everyone deserves a great night's sleep."
+      }
+    },
+    "story": {
+      "type": "cm-about-story",
+      "name": "Brand Story",
+      "settings": {
+        "eyebrow": "WHO WE ARE",
+        "heading": "Born from a passion for better sleep",
+        "text": "<p>At Cloudy, we believe everyone deserves to wake up feeling refreshed and ready to take on the day. Our journey began with a simple idea: combine cutting-edge sleep science with premium materials to create mattresses that truly transform how you sleep.</p><p>From our first mattress to our full range of sleep solutions, we've helped over 70,000 customers find their perfect night's rest.</p>",
+        "bg_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60
+      }
+    },
+    "values": {
+      "type": "cm-about-values",
+      "name": "Mission & Values",
+      "settings": {
+        "eyebrow": "WHAT WE STAND FOR",
+        "heading": "OUR MISSION & VALUES",
+        "subtext": "Everything we do is driven by our commitment to quality, comfort, and your well-being.",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "blocks": {
+        "value_1": {
+          "type": "value",
+          "settings": {
+            "title": "Quality Craftsmanship",
+            "description": "Every mattress is built with premium materials and rigorous attention to detail."
+          }
+        },
+        "value_2": {
+          "type": "value",
+          "settings": {
+            "title": "Customer First",
+            "description": "Your comfort and satisfaction drive every decision we make."
+          }
+        },
+        "value_3": {
+          "type": "value",
+          "settings": {
+            "title": "Sleep Science",
+            "description": "Our products are backed by research and designed for better rest."
+          }
+        }
+      },
+      "block_order": ["value_1", "value_2", "value_3"]
+    },
+    "stats": {
+      "type": "cm-about-stats",
+      "name": "Key Stats",
+      "settings": {
+        "eyebrow": "BY THE NUMBERS",
+        "heading": "OUR IMPACT",
+        "subtext": "Numbers that reflect our commitment to quality and customer satisfaction.",
+        "padding_top": 60,
+        "padding_bottom": 60
+      },
+      "blocks": {
+        "stat_1": {
+          "type": "stat",
+          "settings": {
+            "number": "70,000+",
+            "label": "HAPPY CUSTOMERS",
+            "description": "Sleeping better every night"
+          }
+        },
+        "stat_2": {
+          "type": "stat",
+          "settings": {
+            "number": "100",
+            "label": "NIGHTS TRIAL",
+            "description": "Risk-free sleep experience"
+          }
+        },
+        "stat_3": {
+          "type": "stat",
+          "settings": {
+            "number": "4.8",
+            "label": "STAR RATING",
+            "description": "Average customer review"
+          }
+        },
+        "stat_4": {
+          "type": "stat",
+          "settings": {
+            "number": "10+",
+            "label": "YEARS",
+            "description": "Of sleep expertise"
+          }
+        }
+      },
+      "block_order": ["stat_1", "stat_2", "stat_3", "stat_4"]
+    },
+    "cta": {
+      "type": "cm-about-cta",
+      "name": "About CTA",
+      "settings": {
+        "eyebrow": "READY TO SLEEP BETTER?",
+        "heading": "Start Your Sleep Journey",
+        "text": "Take our mattress quiz and discover the perfect match for your sleep style.",
+        "btn_label": "Take the Mattress Quiz",
+        "btn_link": ""
+      }
+    }
+  },
+  "order": ["hero", "story", "values", "stats", "cta"]
+}

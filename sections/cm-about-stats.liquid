@@ -1,0 +1,156 @@
+{{ 'cm-about-stats.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+{%- endstyle -%}
+
+<div class="cm-about-stats section-{{ section.id }}-padding">
+  <div class="cm-about-stats-container">
+    <div class="cm-about-stats-header">
+      {%- if section.settings.eyebrow != blank -%}
+        <span class="cm-about-stats-eyebrow">{{ section.settings.eyebrow }}</span>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="cm-about-stats-heading">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.subtext != blank -%}
+        <p class="cm-about-stats-sub">{{ section.settings.subtext }}</p>
+      {%- endif -%}
+    </div>
+
+    <div class="cm-about-stats-grid">
+      {%- for block in section.blocks -%}
+        <div class="cm-about-stat-card" {{ block.shopify_attributes }}>
+          {%- if block.settings.number != blank -%}
+            <div class="cm-about-stat-number">{{ block.settings.number }}</div>
+          {%- endif -%}
+          {%- if block.settings.label != blank -%}
+            <div class="cm-about-stat-label">{{ block.settings.label }}</div>
+          {%- endif -%}
+          {%- if block.settings.description != blank -%}
+            <p class="cm-about-stat-desc">{{ block.settings.description }}</p>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "CM About Stats",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "BY THE NUMBERS"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "OUR IMPACT"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "Numbers that reflect our commitment to quality and customer satisfaction."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Padding Top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Padding Bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "default": 60
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Stat Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Number",
+          "default": "70,000+"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "HAPPY CUSTOMERS"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Sleeping better every night"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "CM About Stats",
+      "blocks": [
+        {
+          "type": "stat",
+          "settings": {
+            "number": "70,000+",
+            "label": "HAPPY CUSTOMERS",
+            "description": "Sleeping better every night"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "100",
+            "label": "NIGHTS TRIAL",
+            "description": "Risk-free sleep experience"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "4.8",
+            "label": "STAR RATING",
+            "description": "Average customer review"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "10+",
+            "label": "YEARS",
+            "description": "Of sleep expertise"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

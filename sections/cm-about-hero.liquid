@@ -1,0 +1,70 @@
+{{ 'cm-about-hero.css' | asset_url | stylesheet_tag }}
+
+<section class="cm-about-hero">
+  <div class="cm-about-hero-bg">
+    {%- if section.settings.image != blank -%}
+      <img
+        src="{{ section.settings.image | image_url: width: 3840 }}"
+        alt="{{ section.settings.image.alt | escape }}"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.height }}"
+        loading="eager"
+      >
+    {%- else -%}
+      {{ 'lifestyle-2' | placeholder_svg_tag: 'cm-about-hero-bg-placeholder' }}
+    {%- endif -%}
+  </div>
+  <div class="cm-about-hero-overlay"></div>
+  <div class="cm-about-hero-content">
+    {%- if section.settings.eyebrow != blank -%}
+      <span class="cm-about-hero-eyebrow">{{ section.settings.eyebrow }}</span>
+    {%- endif -%}
+    {%- if section.settings.title != blank -%}
+      <h1 class="cm-about-hero-title">{{ section.settings.title }}</h1>
+    {%- endif -%}
+    {%- if section.settings.subtitle != blank -%}
+      <p class="cm-about-hero-subtitle">{{ section.settings.subtitle }}</p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "CM About Hero",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "OUR STORY"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "The Cloudy Story"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default": "We started with a simple mission: everyone deserves a great night's sleep."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "CM About Hero"
+    }
+  ]
+}
+{% endschema %}
