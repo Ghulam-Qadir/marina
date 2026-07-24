@@ -135,4 +135,7 @@
   .cm-blog-heading {
     font-size: 28px;
   }
+  .cm-blog-section{
+    padding:40px;
+  }
 }
