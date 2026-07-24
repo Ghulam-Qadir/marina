@@ -150,8 +150,9 @@
 
   .cm-sleep-img {
     max-width: 134%;
+    width:455px;
     right: 0;
-    margin-left: -17%;
+    margin-left: -10%;
   }
 
   .cm-sleep-bold .top-title {
