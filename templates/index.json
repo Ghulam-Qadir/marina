@@ -53,7 +53,7 @@
         "promo_image": "shopify://shop_images/saller-half-bg.png",
         "promo_small": "Shop Our Best Sellers",
         "promo_large": "BestDiscounts",
-        "collection": "hydrogen",
+        "collection": "automated-collection",
         "padding_top": 40,
         "padding_bottom": 40
       }
@@ -136,16 +136,6 @@
         "padding_bottom": 52
       }
     },
-    "cm_bundle_qi6d7c": {
-      "type": "cm-bundle",
-      "name": "CM Bundle",
-      "settings": {
-        "heading": "Buy More Save More",
-        "collection": "automated-collection",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "cm_product_tabs_rUzKzY": {
       "type": "cm-product-tabs",
       "blocks": {
@@ -206,7 +196,7 @@
       "settings": {
         "eyebrow": "WANT TO KNOW MORE",
         "heading": "READ THE CLOUDY'S DIGEST",
-        "description": "",
+        "description": "I",
         "blog": "news",
         "posts_count": 3,
         "padding_top": 40,
@@ -219,7 +209,6 @@
     "cm_best_sellers_zKJjrC",
     "cm_sleep_cta_gNWtdx",
     "brand_section_ppMbc4",
-    "cm_bundle_qi6d7c",
     "cm_product_tabs_rUzKzY",
     "cm_blog_posts_iGFmxg"
   ]
