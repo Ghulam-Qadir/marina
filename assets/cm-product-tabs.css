@@ -383,7 +383,7 @@
   }
 }
 
-@media (max-width: 376px) {
+@media (max-width: 375px) {
   .cm-product-shop-now{
 flex-direction: column;
   }
