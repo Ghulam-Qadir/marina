@@ -53,7 +53,7 @@
         "promo_image": "shopify://shop_images/saller-half-bg.png",
         "promo_small": "Shop Our Best Sellers",
         "promo_large": "BestDiscounts",
-        "collection": "automated-collection",
+        "collection": "hydrogen",
         "padding_top": 40,
         "padding_bottom": 40
       }
@@ -70,7 +70,7 @@
         "btn_label": "Shop Now",
         "btn_link": "shopify://collections/hydrogen",
         "subtext": "Take our quick 2-minute quiz to discover the mattress that's designed for your unique sleep needs.",
-        "bg_color": "#f7e5c8",
+        "bg_color": "#F7E5C8",
         "image": "shopify://shop_images/sleeping-girl.png",
         "padding_top": 100,
         "padding_bottom": 100
